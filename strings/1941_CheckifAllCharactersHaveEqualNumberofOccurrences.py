@@ -1,20 +1,11 @@
 class Solution:
     def areOccurrencesEqual(self, s: str) -> bool:
-        dict={}
-        flag=0
+        dict = {}
         for i in s:
-            if i in dict:
-                dict[i] += 1
-            else:
-                dict[i] = 1
-        j=list(dict.values())
+            if i not in dict:
+                dict[i] = 0
+            dict[i] += 1
         for i in dict.values():
-            if i == j[0]:
-                continue
-            else:
-                flag = 1
-                break
-        if flag == 0:
-            return True
-        else:
-            return False
+            if i != list(dict.values())[0]:
+                return False
+        return True
