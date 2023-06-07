@@ -17,3 +17,6 @@ class Solution(object):
                 out = out + "".join(memory[1:len(memory)-1])
                 memory = []
         return out
+
+
+
