@@ -8,3 +8,5 @@ class Solution:
                     count += 1
             list.append(count)
         return list
+
+    
